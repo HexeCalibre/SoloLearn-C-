@@ -17,23 +17,24 @@ namespace SoloLearn
             User user = new User(accNumber, balance);
 
             user.ShowDetails();
-
         }
     }
 
     class Account
     {
-        private double Balance { get; set; }
+        // Changed access modifier from private to protected
+        protected double Balance { get; set; }
     }
 
     class User : Account
     {
         public string AccNumber { get; set; }
-        
-        //complete the constructor
+
+        // Constructor to assign values to members
         public User(string accNumber, double balance)
         {
-            
+            AccNumber = accNumber;
+            Balance = balance; // Assigning the balance
         }
 
         public void ShowDetails()
