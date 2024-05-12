@@ -36,3 +36,14 @@ file0.cs(14,21): error CS0509: 'Program.Dog': cannot derive from sealed type 'Pr
 In this case, we cannot derive the Dog class from the Animal class because Animal is **sealed**.
 
 > he **sealed** keyword provides a level of protection to your class so that other classes cannot inherit from it.
+
+to derive a class B from class A and prevent class B from being inherited.
+
+```cs
+class A {
+
+}
+sealed class B : A {
+    
+}
+```
