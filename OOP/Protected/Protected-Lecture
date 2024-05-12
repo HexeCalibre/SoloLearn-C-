@@ -1,0 +1,77 @@
+# PROTECTED
+
+ Up to this point, we have worked exclusively with **public** and **private** access modifiers.
+
+Public members may be accessed from anywhere outside of the class, while access to private members is limited to their class. 
+
+The **protected** access modifier is very similar to **private** with one difference; it can be accessed in the derived classes. So, a **protected** member is accessible only from derived classes.
+
+**For example:**
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SoloLearn
+{
+    class Program
+    {
+        class Person {
+            protected int Age {get; set;}
+            protected string Name {get; set;}
+        }
+        class Student : Person {
+            public Student(string nm) {
+                Name = nm;
+            }
+            public void Speak() {
+                Console.Write("Name: "+Name);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Student s = new Student("David");
+            s.Speak();
+        }
+    }
+}
+```
+
+As you can see, we can access and modify the **Name** property of the base class from the derived class.
+
+But, if we try to access it from outside code, we will get an error:
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SoloLearn
+{
+    class Program
+    {
+        class Person {
+            protected int Age {get; set;}
+            protected string Name {get; set;}
+        }
+        class Student : Person {
+            public Student(string nm) {
+                Name = nm;
+            }
+            public void Speak() {
+                Console.Write("Name: "+Name);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Student s = new Student("David");
+            s.Speak();
+        }
+    }
+}
+```
