@@ -94,6 +94,7 @@ namespace SoloLearn
 
 > All arithmetic and comparison operators can be overloaded. For instance, you could define greater than and less than operators for the boxes that would compare the Boxes and return a **boolean** result. Just keep in mind that when overloading the greater than operator, the less than operator should also be defined.
 
+<<<<<<< HEAD
 To overload the greater than operator for the Box class.
 ```cs
 public static bool operator > (Box a, Box b) {
@@ -103,3 +104,6 @@ public static bool operator > (Box a, Box b) {
     return false;
 }
 ```
+=======
+
+>>>>>>> 97dabf85648c6904360c99f9fb59508c852cd6ad
